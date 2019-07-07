@@ -1,0 +1,64 @@
+[debug] [2018-05-27T13:21:13.131Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T13:21:13.135Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LesakI\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-27T13:21:13.135Z] CLI Version:   3.18.5
+[debug] [2018-05-27T13:21:13.136Z] Platform:      win32
+[debug] [2018-05-27T13:21:13.136Z] Node Version:  v8.10.0
+[debug] [2018-05-27T13:21:13.137Z] Time:          Sun May 27 2018 16:21:13 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:21:13.137Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-27T13:21:13.165Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-27T13:21:13.166Z] > authorizing via signed-in user
+[debug] [2018-05-27T13:21:13.170Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/selhoz-e6d21  
+  
+ Sun May 27 2018 16:21:13 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:21:14.168Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T13:21:14.170Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/selhoz-e6d21/tokens  
+  
+ Sun May 27 2018 16:21:14 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:21:14.912Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T13:21:14.914Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/selhoz-e6d21  
+  
+ Sun May 27 2018 16:21:14 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:21:16.026Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\SelHoz\quickstart-js-master\firestore'...
+[info] 
+[debug] [2018-05-27T13:21:16.030Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/523438837217/clients/_:getWebAppConfig  
+  
+ Sun May 27 2018 16:21:16 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:21:17.342Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-27T13:33:03.858Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T13:33:03.863Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LesakI\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-27T13:33:03.863Z] CLI Version:   3.18.5
+[debug] [2018-05-27T13:33:03.864Z] Platform:      win32
+[debug] [2018-05-27T13:33:03.864Z] Node Version:  v8.10.0
+[debug] [2018-05-27T13:33:03.865Z] Time:          Sun May 27 2018 16:33:03 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:33:03.866Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-27T13:33:03.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-27T13:33:03.891Z] > authorizing via signed-in user
+[debug] [2018-05-27T13:33:03.896Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/selhoz-e6d21  
+  
+ Sun May 27 2018 16:33:03 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:33:04.997Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T13:33:04.998Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/selhoz-e6d21/tokens  
+  
+ Sun May 27 2018 16:33:04 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:33:05.750Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T13:33:05.754Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/selhoz-e6d21  
+  
+ Sun May 27 2018 16:33:05 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:33:06.938Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\SelHoz\quickstart-js-master\firestore'...
+[info] 
+[debug] [2018-05-27T13:33:06.947Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/523438837217/clients/_:getWebAppConfig  
+  
+ Sun May 27 2018 16:33:06 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-27T13:33:07.960Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+

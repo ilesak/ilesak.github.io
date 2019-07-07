@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAFenJgKRPk8OFFstyhGDb3u2mn5nuo-JI",
+    authDomain: "prproject-d6aa8.firebaseapp.com",
+    databaseURL: "https://prproject-d6aa8.firebaseio.com",
+    projectId: "prproject-d6aa8",
+    storageBucket: "",
+    messagingSenderId: "821838336888",
+    appId: "1:821838336888:web:9b9c26bef7ce43d9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script type="text/javascript" src="js/logining.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Pacifico" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-extended  teal darken-1 ">
+            <!—Главное меню—>
+            <div class="nav-wrapper white-text">
+                <a href="index.html" class="brand-logo">
+                  <img src="images/traktor1.png" alt="logo" width="50">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                 <i class="material-icons white-text">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a class="choose" href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="catalog.html">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="contact.php">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="auth.html" id="vhod" style="opacity:0">Войти</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!—Боковое меню на мобилках и планшетах—>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <a href="index.html">Главная</a>
+            </li>
+            <li>
+                <a href="catalog.html">Каталог</a>
+            </li>
+            <li>
+                <a href="contact.html">Контакты</a>
+            </li>
+            <li>
+                <a href="auth.html">Войти</a>
+            </li>
+        </ul>
+        <div class="description">
+            <p>Добро пожаловать в онлайн-каталог магазина сельхозтехники, инструментов и акскссуаров! </p>
+        </div>
+        <!—Слайдер—>
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item red-text" href="#one!">
+                <img src="images/instrumentyy.jpeg" alt="instrumenty">
+            </div>
+            <div class="carousel-item red-text" href="#two!">
+                <img src="images/opriskivateli.jpg" alt="Motoblock">
+            </div>
+            <div class="carousel-item red-text" href="#three!">
+                <img src="images/ropa_keiler-1-header_dji_0021.-banner.1920x0.jpg" alt="Grimme-GL">
+            </div>
+            <div class="carousel-item red-text" href="#four!">
+                <img src="images/stroitel-universal-1.jpg" alt="rabochaya-odezhda">
+            </div>
+        </div>
+        <a href="#"><div class="button-message" onclick="openmodal()">Связаться с нами</div></a>
+        
+        <h3>
+      <blockquote>О нас</blockquote>
+    </h3>
+        <div class="about teal darken-1 center white-text ">
+            <p>
+                <b> Магазин "Агро"</b> – интересный магазин со своим прямым направлением на предоставление в своем каталоге самых необходимых и всегда пользующихся спросом качественных товаров сельхозтехники, инструментов, оборудвания, товаров для дачи и сада, спецодежды. </p>
+            <p> Мы работаем на протяжении 5 лет с крупнейшими первыми поставщиками Беларуси, поставляющими известные бренды российских и зарубежных производителей. Среди нашего ассортимента есть и товары наших отечественных белорусских производителей. Мы предлагаем Вам качественные сертифицированные товары с гарантийным обслуживанием.</p>
+        </div>
+        <div class="about2">
+            <h4>
+        <blockquote>
+          <b>Почему выгодно работать с нами? </b>
+        </blockquote>
+      </h4>
+            <p>На нашем интернет ресурсе располагается удобная карта сайта с большим ассортиментом товаров, представленных с максимальным количеством фотографий отличного качества и полным описанием продукции.</p>
+            <h5 class="center">
+        <b>У нас справедливые цены</b>
+      </h5>
+            <div class="kartockhki">
+                <div class="blok">
+                    <div class=" card">
+                        <div class="card-image">
+                            <img src="images/garant.png">
+                        </div>
+                        <div class="card-content">
+                            <p>Качество продукции на самом высоком уровне.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blok">
+                    <div class="  card">
+                        <div class="card-image">
+                            <img src="images/Клиентоориентированность-тренинг.-Тренинг-по-клиентоориентированности.jpg" id="kartinka2">
+                        </div>
+                        <div class="card-content">
+                            <p>Внимательная и учтивая работа с каждым посетителем.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blok">
+                    <div class=" card">
+                        <div class="card-image">
+                            <img src="images/action.png">
+                        </div>
+                        <div class="card-content">
+                            <p>Гибкая система ценообразования, акции и скидки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blok">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/Delivery.png">
+                        </div>
+                        <div class="card-content">
+                            <p>Оперативное оформление и доставка заказов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <i class="material-icons right modal-close">close</i>
+                <h4>Свяжитесь с нами</h4>
+                <div class="row">
+
+                    <form action="mailinstrumenti.php" method="POST" class="col s12">
+                        
+                        <div class="input-field col s12 m12 l12">
+                            Можете позвонить по указанному номеру телефона в рабочее время.<br>
+                             Телефоны: 
+                             Здесь будут номера телефонов. <br>Если Вам удобно - отправьте письмо по электронной почте с Вами свяжутся.
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <i class="material-icons prefix">person</i>
+                            <input id="icon_prefix" name="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Ваше имя</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input id="last_name" name="last_name" type="text" class="validate">
+                            <label for="last_name">Фамилия</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <i class="material-icons prefix">contact_phone</i>
+                            <input id="icon_telephone" name="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">Номер телефона</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <i class="material-icons prefix">contact_mail</i>
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <input id="dis" name="dis" type="text" class="validate">
+                            <label for="dis">Тема сообщения</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea  name="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Текст сообщения</label>
+                        </div>
+                        <button class="col s12 btn waves-effect waves-light  teal darken-2" type="submit">Отправить
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+        <footer class="page-footer teal">
+            <div class="container center">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="black-text">Вы можете нас найти по адресу:</h5>
+                        <p class="black-text text-lighten-4">Беларусь, г. Брест ул. Московская 267, 224017</p>
+                        <h5 class="black-text ">Режим работы:</h5>
+                        <p class="black-text text-lighten-4 ">Понедельник-пятница: 10.00 - 20.00<br>Суббота, воскресенье: 10.00 - 18.00</p>
+                    </div>
+                    <div class="col l6 s12">
+                        <h5 class="black-text">Контакты</h5>
+                        <ul>
+                            <li>
+                                <a class="black-text text-lighten-3" href="#!">Email: agro-brest@gmail.com</a>
+                            </li>
+                            <li>
+                                <a class="black-text text-lighten-3" href="#!">+375 29 256 98 75</a>
+                            </li>
+                            <li>
+                                <a class="black-text text-lighten-3" href="#!">+375 44 256 98 75</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <div class="container black-text">
+                    © 2018 Все права защищены.
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!—Особенность фреймворка. Неободимо инициализировать некоторые элементы, классы—>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        setTimeout(() => console.log(firebase.auth().currentUser), 5000)
+        $('.sidenav').sidenav();
+        $('.modal').modal();
+    });
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        duration: 400,
+    });
+     function openmodal() {
+        
+            $('.modal').modal('open');
+       
+        };
+    
+    </script>
+    </script>
+</body>
+
+</html>
