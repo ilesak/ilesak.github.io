@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -137,7 +142,6 @@
     $(document).ready(function() {
         // setTimeout( ()=> console.log(firebase.auth().currentUser),1000)
         $('.sidenav').sidenav();
-        initApp();
     });
     </script>
 </body>
