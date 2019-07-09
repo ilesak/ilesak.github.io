@@ -18,3 +18,4 @@ function x(x, x2) {
         document.getElementById(x).innerText = datasnapshot.val();
     })
 }
+
