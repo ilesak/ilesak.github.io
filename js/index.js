@@ -1,5 +1,5 @@
 
-db.collection("mails").doc("").set({
+db.collection("mails").doc("one").set({
     firstName: document.getElementById(firstName),
     lastName: document.getElementById(lastName),
     phone: document.getElementById(phone),
