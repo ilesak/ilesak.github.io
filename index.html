@@ -7,7 +7,9 @@
 
       <!-- Add Firebase products that you want to use -->
       <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>    <script>
+      <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyAFenJgKRPk8OFFstyhGDb3u2mn5nuo-JI",
@@ -20,8 +22,13 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+  });
     </script>
     <script type="text/javascript" src="js/logining.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -49,6 +56,12 @@
                     <li>
                         <a class="choose" href="#">Главная</a>
                     </li>
+                    <li id="admin-menu">
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li id="orders">
+                        <a href="orders.html">Заказы</a>
+                    </li>
                     <li>
                         <a href="catalog.html">Каталог</a>
                     </li>
@@ -67,6 +80,12 @@
                 <a href="index.html">Главная</a>
             </li>
             <li>
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li>
+                        <a href="orders.html">Заказы</a>
+                    </li>
+            <li>
                 <a href="catalog.html">Каталог</a>
             </li>
             <li>
@@ -77,7 +96,7 @@
             </li>
         </ul>
         <div class="description">
-            <p>Добро пожаловать в онлайн-каталог магазина сельхозтехники, инструментов и акскссуаров! </p>
+            <p>Добро пожаловать в онлайн-каталог магазина сельхозтехники, инструментов и аксессуаров! </p>
         </div>
         <!—Слайдер—>
         <div class="carousel carousel-slider center">
@@ -163,16 +182,15 @@
                 <h4>Свяжитесь с нами</h4>
                 <div class="row">
 
-                    <form action="" method="" class="col s12">
-                        
+                
                         <div class="input-field col s12 m12 l12">
                             Можете позвонить по указанному номеру телефона в рабочее время.<br>
                              Телефоны: +375 29 123-45-67<br>Если Вам удобно - отправьте письмо по электронной почте, с Вами свяжутся.
                         </div>
                         <div class="input-field col s12 m12 l6">
                             <i class="material-icons prefix">person</i>
-                            <input id="icon_prefix" name="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Ваше имя</label>
+                            <input id="first_name" name="first_name" type="text" class="validate">
+                            <label for="first_name">Ваше имя</label>
                         </div>
                         <div class="input-field col s12 m12 l6">
                             <input id="last_name" name="last_name" type="text" class="validate">
@@ -189,17 +207,54 @@
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field col s12 m12 l12">
+                            <div>
+                                <label>Пол</label>
+                            </div>
+                            <div class="input-field col s12 m12 l6">
+                                <label>
+                                    <input name="sex" value="мужской" type="radio" checked />
+                                    <span>Мужской</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s12 m12 l6">
+                                <label>
+                                    <input name="sex" value="женский" type="radio" />
+                                    <span>Женский</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12">
+                            <br/>
+                        </div>
+                        <div class="input-field col s12">
+                            <select id="city">
+                              <option value="" disabled selected>Выберите</option>
+                              <option value="Брест">Брест</option>
+                              <option value="Минск">Минск</option>
+                              <option value="Гродно">Гродно</option>
+                            </select>
+                            <label>Город</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" id="adult" />
+                                <span>Вам есть 18 лет?</span>
+                              </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <br/>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
                             <input id="dis" name="dis" type="text" class="validate">
                             <label for="dis">Тема сообщения</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea  name="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="text_value" name="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Текст сообщения</label>
                         </div>
-                        <button class="col s12 btn waves-effect waves-light  teal darken-2" type="submit">Отправить
+                        <button class="col s12 btn waves-effect waves-light  teal darken-2" onclick="writeEmailData()">Отправить
                             <i class="material-icons right">send</i>
                         </button>
-                    </form>
                 </div>
             </div>
         </div> 

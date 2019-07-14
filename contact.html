@@ -8,6 +8,8 @@
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -23,6 +25,7 @@
       firebase.initializeApp(firebaseConfig);
     </script>
     <script type="text/javascript" src="js/logining.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -50,6 +53,12 @@
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
+                    <li id="admin-menu">
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li id="orders">
+                        <a href="orders.html">Заказы</a>
+                    </li>
                     <li>
                         <a href="catalog.html">Каталог</a>
                     </li>
@@ -67,6 +76,12 @@
             <li>
                 <a href="index.html">Главная</a>
             </li>
+            <li id="admin-menu">
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li>
+                        <a href="orders.html">Заказы</a>
+                    </li>
             <li>
                 <a href="catalog.html">Каталог</a>
             </li>
@@ -79,45 +94,77 @@
         </ul>
         <!—Форма обратной связи—>
         <div class="row">
-            <form class="col s12">
                 <h3>Обратная связь</h3>
                 <div class="row">
-                    <form action="mail.php" method="POST" class="col s12">
-                        <div class="input-field col s12 m12 l6">
+                    <div class="input-field col s12 m12 l6">
                             <i class="material-icons prefix">person</i>
-                            <input name="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Ваше имя</label>
+                            <input id="first_name" name="first_name" type="text" class="validate">
+                            <label for="first_name">Ваше имя</label>
                         </div>
                         <div class="input-field col s12 m12 l6">
-                            <input name="last_name" type="text" class="validate">
+                            <input id="last_name" name="last_name" type="text" class="validate">
                             <label for="last_name">Фамилия</label>
                         </div>
                         <div class="input-field col s12 m12 l6">
                             <i class="material-icons prefix">contact_phone</i>
-                            <input name="icon_telephone" type="tel" class="validate">
+                            <input id="icon_telephone" name="icon_telephone" type="tel" class="validate">
                             <label for="icon_telephone">Номер телефона</label>
                         </div>
                         <div class="input-field col s12 m12 l6">
                             <i class="material-icons prefix">contact_mail</i>
-                            <input name="email" type="email" class="validate">
+                            <input id="email" name="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
-                        <div class="input-field col s12 m12 l6">
-                            <input name="dis" type="text" class="validate">
-                            <label for="dis">Укажите город</label>
+                        <div class="input-field col s12 m12 l12">
+                            <div>
+                                <label>Пол</label>
+                            </div>
+                            <div class="input-field col s12 m12 l6">
+                                <label>
+                                    <input name="sex" value="мужской" type="radio" checked />
+                                    <span>Мужской</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s12 m12 l6">
+                                <label>
+                                    <input name="sex" value="женский" type="radio" />
+                                    <span>Женский</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="input-field col s12">
-                            <i class="material-icons prefix">edit</i>
-                            <textarea name="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Текст сообщения</label>
+                            <br/>
                         </div>
-                        <button class="col s12 btn waves-effect waves-light  teal darken-2" type="submit">Отправить
+                        <div class="input-field col s12">
+                            <select id="city">
+                              <option value="" disabled selected>Выберите</option>
+                              <option value="Брест">Брест</option>
+                              <option value="Минск">Минск</option>
+                              <option value="Гродно">Гродно</option>
+                            </select>
+                            <label class="lable">Город</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" id="adult" />
+                                <span>Вам есть 18 лет?</span>
+                              </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <br/>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <input id="dis" name="dis" type="text" class="validate">
+                            <label for="dis">Тема сообщения</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="text_value" name="textarea1" class="materialize-textarea"></textarea>
+                            <label   for="textarea1">Текст сообщения</label>
+                        </div>
+                        <button class="col s12 btn waves-effect waves-light  teal darken-2" onclick="writeEmailData()">Отправить
                             <i class="material-icons right">send</i>
                         </button>
-                    </form>
-                </div>
-            </form>
-           
+                </div>           
         </div>
         <div id="map" class="col s12">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.902512381101!2d23.767403416001425!3d52.09970577504323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210e854c456cbd%3A0xa5f0cadd1be61aff!2z0YPQuy4g0JzQvtGB0LrQvtCy0YHQutCw0Y8gMjc1LCDQkdGA0LXRgdGCIDIyNDAyMw!5e0!3m2!1sru!2sby!4v1562509765821!5m2!1sru!2sby" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -166,6 +213,10 @@
         setTimeout(() => console.log(firebase.auth().currentUser), 5000)
         $('.sidenav').sidenav();
     });
+     document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+  });
     </script>
    
 </body>

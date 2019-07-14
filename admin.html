@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -15,14 +16,19 @@
         authDomain: "prproject-d6aa8.firebaseapp.com",
         databaseURL: "https://prproject-d6aa8.firebaseio.com",
         projectId: "prproject-d6aa8",
-        storageBucket: "",
+        storageBucket: "prproject-d6aa8.appspot.com",
         messagingSenderId: "821838336888",
         appId: "1:821838336888:web:9b9c26bef7ce43d9"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+  });
     </script>
     <script type="text/javascript" src="js/logining.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -32,35 +38,35 @@
     <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Ftraktorteal.png?alt=media&token=d9a14f51-8fd1-4015-a75e-db5123693c87" type="image/x-icon"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог</title>
+    <title>Главная</title>
 </head>
 
 <body>
     <div class="container">
         <nav class="nav-extended  teal darken-1 ">
-            <!—  Главное меню—>
+            <!—Главное меню—>
             <div class="nav-wrapper white-text">
                 <a href="index.html" class="brand-logo">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Ftraktor1.png?alt=media&token=86b261ea-254d-48e7-8889-947939d37ad9" alt="logo" width="50">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Ftraktor1.png?alt=media&token=86b261ea-254d-48e7-8889-947939d37ad9" alt="logo" width="50">
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons white-text">menu</i>
+                 <i class="material-icons white-text">menu</i>
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
                     <li id="admin-menu">
-                        <a href="admin.html">Письма</a>
+                        <a class="choose" href="#">Письма</a>
                     </li>
                     <li id="orders">
                         <a href="orders.html">Заказы</a>
                     </li>
                     <li>
-                        <a class="choose" href="#">Каталог</a>
+                        <a href="catalog.html">Каталог</a>
                     </li>
                     <li>
-                        <a href="contact.html ">Контакты</a>
+                        <a href="contact.html">Контакты</a>
                     </li>
                     <li>
                         <a href="auth.html" id="vhod">Войти</a>
@@ -73,12 +79,12 @@
             <li>
                 <a href="index.html">Главная</a>
             </li>
-            <li id="admin-menu">
-                        <a href="admin.html">Письма</a>
-                    </li>
-                    <li>
-                        <a href="orders.html">Заказы</a>
-                    </li>
+            <li>
+                <a href="admin.html">Письма</a>
+            </li>
+            <li>
+                <a href="orders.html">Заказы</a>
+            </li>
             <li>
                 <a href="catalog.html">Каталог</a>
             </li>
@@ -89,57 +95,8 @@
                 <a href="auth.html">Войти</a>
             </li>
         </ul>
-        <div class="cards ">
-            <div class="plast ">
-                <div class=" card ">
-                    <div class="card-image ">
-                        <a href="potato.html"><img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Fcard-potato.jpg?alt=media&token=5ef5b40f-82df-4ece-9715-e75c8e605022"></a>
-                    </div>
-                    <div class="card-content ">
-                        <a class="font teal-text text-darken-1" href="potato.html ">Картофельная техника</a>
-                    </div>
-                </div>
-            </div>
-            <div class="plast ">
-                <div class=" card ">
-                    <div class="card-image ">
-                        <a href="zerno.html"><img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Fcard-zerno.jpg?alt=media&token=d80246ad-9ef1-47c7-9e01-d944f6bf731d"></a>
-                    </div>
-                    <div class="card-content ">
-                        <a class="font teal-text text-darken-1" href="zerno.html">Зерновая техника</a>
-                    </div>
-                </div>
-            </div>
-            <div class="plast ">
-                <div class=" card ">
-                    <div class="card-image ">
-                        <a href="instrumenti.html"><img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Fcard-instrumenty.jpg?alt=media&token=976d506d-28da-45dd-beb9-0b46ebc73066"></a>
-                    </div>
-                    <div class="card-content ">
-                        <a class="font teal-text text-darken-1 " href="instrumenti.html ">Инструменты</a>
-                    </div>
-                </div>
-            </div>
-            <div class="plast ">
-                <div class=" card ">
-                    <div class="card-image ">
-                        <a href="odezhda.html"><img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Fcard-rabochaya_odezhda.png?alt=media&token=28ee6aec-ae99-4de2-a229-469cd232282a"></a>
-                    </div>
-                    <div class="card-content ">
-                        <a class="font teal-text text-darken-1 " href="odezhda.html ">Рабочая одежда</a>
-                    </div>
-                </div>
-            </div>
-            <div class="plast ">
-                <div class=" card ">
-                    <div class="card-image ">
-                        <a href="himZaschita.html"><img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Fcard-him_zaschita1.jpg?alt=media&token=896a7b40-6780-40bb-a8a5-4430318ca175"></a>
-                    </div>
-                    <div class="card-content ">
-                        <a class="font teal-text text-darken-1 " href="himZaschita.html">Опрыскиватели</a>
-                    </div>
-                </div>
-            </div>
+        <div id="main-content">
+            
         </div>
         <footer class="page-footer teal">
             <div class="container center">
@@ -173,15 +130,28 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin=" anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript " src="js/materialize.min.js "></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <!—Особенность фреймворка. Неободимо инициализировать некоторые элементы, классы—>
     <script type="text/javascript">
     $(document).ready(function() {
         setTimeout(() => console.log(firebase.auth().currentUser), 5000)
         $('.sidenav').sidenav();
+        $('.modal').modal();
     });
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        duration: 400,
+    });
+     function openmodal() {
+        
+            $('.modal').modal('open');
+       
+        };
+    
+    </script>
     </script>
 </body>
 

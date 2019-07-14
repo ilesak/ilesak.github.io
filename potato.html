@@ -40,7 +40,7 @@
 <body>
     <div class="container">
         <nav class="nav-extended  teal darken-1 ">
-            <!—Главное ybменю—>
+            <!—Главное меню—>
             <div class="nav-wrapper white-text">
                 <a href="index.html" class="brand-logo">
                     <img src="https://firebasestorage.googleapis.com/v0/b/prproject-d6aa8.appspot.com/o/ostalnoe%2Ftraktor1.png?alt=media&token=86b261ea-254d-48e7-8889-947939d37ad9" alt="logo" width="50">
@@ -51,6 +51,12 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
                         <a href="index.html">Главная</a>
+                    </li>
+                    <li id="admin-menu">
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li id="orders">
+                        <a href="orders.html">Заказы</a>
                     </li>
                     <li>
                         <a class="choose" href="#">Каталог</a>
@@ -69,6 +75,12 @@
             <li>
                 <a href="index.html">Главная</a>
             </li>
+            <li>
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li>
+                        <a href="orders.html">Заказы</a>
+                    </li>
             <li>
                 <a href="catalog.html">Каталог</a>
             </li>
@@ -227,7 +239,6 @@
                 <i class="material-icons right modal-close">close</i>
                 <h4>Оформление заказа</h4>
                 <div class="row">
-                    <form action="" method="" class="col s12">
                         <div class="input-field col s12 m12 l6">
                             <i class="material-icons prefix">person</i>
                             <input id = "firstName" name="icon_prefix" type="text" class="validate">
@@ -256,10 +267,9 @@
                             <textarea id = "message" name="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Текст сообщения</label>
                         </div>
-                        <button class="col s12 btn waves-effect waves-light  teal darken-2" type="submit">Отправить
+                        <button class="col s12 btn waves-effect waves-light  teal darken-2" onclick="writeOrder()">Отправить
                             <i class="material-icons right">send</i>
                         </button>
-                    </form>
                 </div>
             </div>
         </div>

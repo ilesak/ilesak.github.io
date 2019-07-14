@@ -22,6 +22,7 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
+    <script type="text/javascript" src="js/logining.js"></script>
     <script type="text/javascript" src="js/auth.js"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -51,6 +52,12 @@
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
+                    <li id="admin-menu">
+                        <a href="admin.html">Письма</a>
+                    </li>
+                    <li id="orders">
+                        <a href="orders.html">Заказы</a>
+                    </li>
                     <li>
                         <a href="catalog.html">Каталог</a>
                     </li>
@@ -68,6 +75,12 @@
             <li>
                 <a href="index.html">Главная</a>
             </li>
+            <li>
+                <a href="admin.html">Письма</a>
+            </li>
+            <li>
+                        <a href="orders.html">Заказы</a>
+                    </li>
             <li>
                 <a href="catalog.html">Каталог</a>
             </li>
@@ -94,9 +107,7 @@
             &nbsp;&nbsp;&nbsp;
             <button class="col s12 m12 l6 offset-l3 btn waves-effect waves-light  teal darken-2" id="quickstart-sign-up" name="signup">Зарегистрироваться</button>
             &nbsp;&nbsp;&nbsp;
-            <button class="col s12 m12 l6 offset-l3 btn waves-effect waves-light  teal darken-2" disabled id="quickstart-verify-email" name="verify-email">Отправить письмо подтверждения на email</button>
-            &nbsp;&nbsp;&nbsp;
-            <button class="col s12 m12 l6 offset-l3 btn waves-effect waves-light  teal darken-2" id="quickstart-password-reset" name="verify-email">Отправить письмо сброса пароля</button>
+            <button class="col s12 m12 l6 offset-l3 btn waves-effect waves-light  teal darken-2" id="quit" name="quit">Выйти из аккаунта</button>
             <div class="quickstart-user-details-container">
                 Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
                 <div>Firebase auth <code>currentUser</code> object value:</div>
