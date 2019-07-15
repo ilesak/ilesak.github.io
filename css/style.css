@@ -114,6 +114,11 @@ blockquote {
 	border-left: 5px solid black;
 }
 
+.active-tab{
+	background-color: #00796b;
+	cursor:no-drop;
+}
+
 .lable{
 	font-family: 'Oswald', sans-serif;
 	font-size: 15px;
