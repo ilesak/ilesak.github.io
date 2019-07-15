@@ -51,6 +51,11 @@ blockquote {
 	font-size: 1.1em;
 	font-weight: 400;
 }
+.auth-footer {
+	position: absolute;
+	bottom: 0;
+	width: 70%;
+}
 
 .about>p>b {
 	color: whitesmoke;
@@ -176,6 +181,9 @@ blockquote {
 		width: 30%;
 		margin:0 1.6%;
 	}
+	.auth-footer{
+		width: 70%;
+	}
 }
 
 @media screen and (max-width:1200px) {
@@ -186,6 +194,9 @@ blockquote {
 	.cards .plast{
 		width: 30%;
 		margin:0 1.6%;
+	}
+	.auth-footer{
+		width: 70%;
 	}
 }
 
@@ -198,6 +209,8 @@ blockquote {
 		width: 45%;
 		margin:0 2.5%;
 	}
+	.auth-footer {
+    width: 85%;
 }
 
 @media screen and (max-width:600px) {
@@ -219,6 +232,8 @@ blockquote {
 	.cards .plast{
 		width: 100%;
 	}
+	.auth-footer {
+    width: 90%;
 
 }
 
